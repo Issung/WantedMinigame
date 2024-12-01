@@ -1,6 +1,5 @@
 import { Level, Level0, Level1, Level2, Level3, Level4, Level5, Level6, Params } from './levels.ts';
 import * as util from './util.ts';
-import * as consts from './consts.ts';
 
 console.log('game.ts');
 
@@ -31,10 +30,10 @@ const levels = [Level0, Level1, Level2, Level3, Level4, Level5, Level6];
 const bottom = document.querySelector<HTMLDivElement>('div#bottom')!;
 let lastNow = performance.now();
 let elapsedTime = 0; // Track cumulative time
-let animationRequestId = requestAnimationFrame(animate);
 let state = State.InProgress;
 let heads: HTMLImageElement[] = [];
 let level: Level = new Level0();
+requestAnimationFrame(animate);
 
 function resetScene() {
     bottom.style.backgroundColor = 'black';
@@ -99,11 +98,11 @@ function animate() {
     }
     finally {
         lastNow = performance.now();
-        animationRequestId = requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
     }
 }
 
-function onHeadClick(this: HTMLImageElement, ev: MouseEvent) {
+function onHeadClick(this: HTMLImageElement, _: MouseEvent) {
     heads.forEach(head => {
         if (head != this) {
             head.style.visibility = 'hidden';

@@ -28,7 +28,7 @@ export class Level0 implements Level {
         util.setHeadPos(heads[0], consts.CENTER_X, consts.CENTER_Y);
     }
 
-    update(params: Params): void {
+    update(_: Params): void {
     }
 }
 
@@ -41,7 +41,7 @@ export class Level1 implements Level {
         util.setHeadGridPositions(heads, 2, 2);
     }
 
-    update(params: Params): void {
+    update(_: Params): void {
     }
 }
 
@@ -54,7 +54,7 @@ export class Level2 implements Level {
         util.setHeadGridPositions(heads, 5, 2);
     }
 
-    update(params: Params): void {
+    update(_: Params): void {
     }
 }
 
@@ -67,7 +67,7 @@ export class Level3 implements Level {
         util.setHeadGridPositions(heads, 4, 4);
     }
 
-    update(params: Params): void {
+    update(_: Params): void {
     }
 }
 
@@ -83,7 +83,7 @@ export class Level4 implements Level {
         return 30;
     }
 
-    init(heads: HTMLImageElement[]): void {
+    init(_: HTMLImageElement[]): void {
         
     }
 
@@ -120,7 +120,7 @@ export class Level5 implements Level {
         return consts.HEAD_COUNT;
     }
 
-    init(heads: HTMLImageElement[]): void {
+    init(_: HTMLImageElement[]): void {
         
     }
 
