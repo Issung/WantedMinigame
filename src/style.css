@@ -1,0 +1,59 @@
+:root {
+    --hover-outline: white;
+}
+
+div {
+    display: table;
+    min-width: 256px;
+    min-height: 192px;
+}
+
+div#top {
+    position: relative;
+    background-image: url('/img/poster.png');
+
+    img#wanted {
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* This will center the image */
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+div#bottom {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+
+        &#incorrect {
+            filter: drop-shadow(-1px 0px black) drop-shadow(1px 0px black) drop-shadow(0px -1px black) drop-shadow(0px 1px black) !important;
+        }
+
+        &#correct, &:hover {
+            /* Outline respecting PNG transparency. */
+            filter: drop-shadow(-1px 0px var(--hover-outline)) 
+                    drop-shadow(1px 0px var(--hover-outline)) 
+                    drop-shadow(0px -1px var(--hover-outline)) 
+                    drop-shadow(0px 1px var(--hover-outline));
+
+            &:not(#correct), &:not(#incorrect) {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+html {
+    background-color: #111111;
+}
+
+* {
+    image-rendering: pixelated;
+    user-select: none;
+    -webkit-user-drag: none;
+}
