@@ -2,7 +2,23 @@
     --hover-outline: white;
 }
 
-div {
+a {
+    color: white;
+}
+
+div#footer {
+    bottom: 0px;
+    position: absolute;
+}
+
+/*div#game {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}*/
+
+div#top, div#bottom {
     display: table;
     min-width: 256px;
     min-height: 192px;

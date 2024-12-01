@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wanted!</title>
     <link rel="stylesheet" href="/src/style.css" />
+
+    <!-- Disable DarkReader browser extension https://github.com/darkreader/darkreader/blob/main/CONTRIBUTING.md#disabling-dark-reader-on-your-site -->
+    <meta name="darkreader-lock">
 </head>
 
 <body>
-    <div id="top" style="background-color: ghostwhite;">
-        <img id="wanted" />
-    </div>
-    <div id="bottom" style="background-color: black;">
+    <div id="game">
+        <div id="top" style="background-color: ghostwhite;">
+            <img id="wanted" />
+        </div>
+        <div id="bottom" style="background-color: black;">
 
+        </div>
+    </div>
+    <div id="footer">
+        <a href="https://github.com/Issung/WantedMinigame" target="_blank">OpenSource @ https://github.com/Issung/WantedMinigame</a>
     </div>
 </body>
 <script type="module" src="/src/game.ts"></script>

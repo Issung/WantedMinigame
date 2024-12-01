@@ -12,6 +12,8 @@ Everything is frame-rate independent by tracking elapsedTime/deltaTime and using
 
 The game is built with dev dependencies vite & typescript but builds with no dependencies (and I want to keep it that way).
 
+Main branch is deployed automatically via cloudflare pages at https://wantedminigame.pages.dev.
+
 To run locally:
 * `npm i`
 * `npm run dev`
